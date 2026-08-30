@@ -37,9 +37,14 @@
     sections.forEach(section => observer.observe(section));
   }
 
-  window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('is-visible', window.scrollY > 500);
-  }, { passive: true });
+  const updateBackToTop = () => {
+    const visible = window.scrollY > 500;
+    backToTop.hidden = !visible;
+    backToTop.classList.toggle('is-visible', visible);
+  };
+
+  updateBackToTop();
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
 
   backToTop.addEventListener('click', () => {
     if (prefersReducedMotion.matches) {
