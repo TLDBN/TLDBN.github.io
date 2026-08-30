@@ -1,0 +1,94 @@
+:root {
+  --bg: #f5f5f0;
+  --paper: #ffffff;
+  --ink: #15213d;
+  --muted: #667085;
+  --line: #d9dde4;
+  --blue: #315db5;
+  --coral: #bb634c;
+  --soft: #eef2fb;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.55 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 3px solid #bb634c; outline-offset: 3px; }
+.skip-link { position: fixed; left: 1rem; top: -4rem; z-index: 30; padding: .55rem .8rem; background: var(--ink); color: white; }
+.skip-link:focus { top: 1rem; }
+.top { position: sticky; top: 0; z-index: 20; height: 56px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.top-inner { width: min(var(--max), calc(100% - 32px)); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; }
+.brand, h1, h2 { font-family: Charter, "Iowan Old Style", Georgia, serif; }
+.brand { color: var(--ink); font-size: 18px; font-weight: 700; }
+nav { display: flex; gap: 18px; font-size: 12px; font-weight: 700; }
+nav a { color: #566176; padding: 18px 0; border-bottom: 2px solid transparent; }
+nav a[aria-current="page"], nav a:hover { color: var(--blue); border-bottom-color: var(--blue); text-decoration: none; }
+.layout { width: min(var(--max), calc(100% - 32px)); margin: 28px auto 56px; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 30px; align-items: start; }
+.sidebar { position: sticky; top: 76px; min-width: 0; width: 100%; }
+.sidebar h1 { margin: 0 0 6px; font-size: 25px; line-height: 1.05; }
+.role { margin: 0; color: var(--blue); font-size: 13px; font-weight: 700; }
+.affiliation { margin: 2px 0 0; color: var(--muted); font-size: 12px; }
+.social { display: flex; gap: 8px; margin: 13px 0 18px; }
+.social a { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--line); background: var(--paper); }
+.social a:hover { background: var(--soft); text-decoration: none; }
+.social img { width: 18px; height: 18px; }
+.side-block { margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line); }
+.side-title { margin: 0 0 8px; font: 800 11px/1.2 "Avenir Next", "Segoe UI", system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+.section-emoji { display: inline-block; margin-right: .25em; font-family: system-ui, sans-serif; font-size: 1em; line-height: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { padding: 4px 7px; background: var(--soft); color: #38578f; font-size: 10px; }
+.visitor-widget { min-width: 0; width: 100%; max-width: 100%; min-height: 86px; overflow: hidden; border: 1px solid var(--line); background: var(--paper); }
+.visitor-widget > * { display: block; width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+.visitor-widget iframe, .visitor-widget canvas { max-width: 100%; }
+main { min-width: 0; background: var(--paper); border: 1px solid var(--line); padding: 0 26px; }
+.section { scroll-margin-top: 76px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.section:last-child { border-bottom: 0; }
+h2 { margin: 0 0 12px; font-size: 21px; line-height: 1.1; }
+h3 { margin: 0 0 4px; font-size: 14px; line-height: 1.35; color: #274d8d; }
+.section-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+.intro p { margin: 0; color: #465067; }
+.intro p + p { margin-top: 9px; }
+.contact-line { font-size: 12px; }
+.current { padding: 9px 12px; border-left: 3px solid var(--coral); background: #fbf5f1; font-size: 12px; }
+.news, .papers, .records { margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.news { list-style: none; }
+.news li { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 9px 7px; border-bottom: 1px dashed var(--line); }
+.news time, .compact time { color: var(--coral); font-size: 11px; font-weight: 800; }
+.paper { padding: 15px 7px 16px; border-bottom: 1px solid var(--line); }
+.paper p { margin: 8px 0 0; color: #4b5566; font-size: 12px; }
+.paper .venue { display: inline-block; margin: 0; padding: 3px 6px; background: var(--blue); color: white; font-size: 10px; font-weight: 800; }
+.paper .authors { color: #70798a; font-size: 11px; }
+.actions { display: flex; gap: 10px; }
+.actions a { font-size: 11px; font-weight: 700; }
+.compact { display: grid; grid-template-columns: 64px 1fr; gap: 10px; padding: 11px 5px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.compact span { display: block; margin-top: 2px; color: var(--muted); }
+.record, .education-entry { display: grid; grid-template-columns: 42px 110px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.record:last-child, .education-entry:last-child { border-bottom: 0; }
+.record p, .education-entry p { margin: 0; color: var(--muted); font-size: 12px; }
+.record-date { color: var(--coral); font-size: 9px; font-weight: 800; letter-spacing: .025em; line-height: 1.35; }
+.record-location { display: block; margin-top: 5px; color: var(--muted); font-size: 9px; font-weight: 600; letter-spacing: 0; }
+.org-mark { width: 40px; height: 40px; object-fit: contain; }
+.meta-mark { padding: 4px; }
+.didi-mark { padding: 5px; }
+.academic-mark { padding: 2px; }
+footer { width: min(var(--max), calc(100% - 32px)); margin: 0 auto 28px; padding-top: 13px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: 11px; }
+.back-to-top { position: fixed; right: 18px; bottom: 18px; width: 36px; height: 36px; border: 1px solid var(--line); background: var(--paper); color: var(--blue); font-size: 17px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+@media (max-width: 620px) {
+  .top { height: auto; }
+  .top-inner { min-height: 56px; padding: 7px 0; align-items: flex-start; flex-direction: column; gap: 4px; }
+  nav { width: 100%; justify-content: space-between; gap: 4px; font-size: 10px; }
+  nav a { padding: 3px 0; }
+  .layout { grid-template-columns: 1fr; margin-top: 18px; }
+  .sidebar { position: static; }
+  main { padding: 0 18px; }
+  .record, .education-entry { grid-template-columns: 40px 82px minmax(0, 1fr); gap: 9px; }
+  footer { display: block; }
+  footer span { display: block; margin-bottom: 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .back-to-top { transition: none; }
+}
