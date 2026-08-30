@@ -58,10 +58,16 @@ h3 { margin: 0 0 4px; font-size: 14px; line-height: 1.35; color: #274d8d; }
 .news time, .compact time { color: var(--coral); font-size: 11px; font-weight: 800; }
 .paper { padding: 15px 7px 16px; border-bottom: 1px solid var(--line); }
 .paper p { margin: 8px 0 0; color: #4b5566; font-size: 12px; }
+.paper-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.paper-labels { display: flex; align-items: center; gap: 7px; min-width: 0; }
 .paper .venue { display: inline-block; margin: 0; padding: 3px 6px; background: var(--blue); color: white; font-size: 10px; font-weight: 800; }
+.paper-status { color: var(--muted); font-size: 10px; }
+.paper h3 { margin: 7px 0 4px; }
 .paper .authors { color: var(--muted); font-size: 11px; }
-.actions { display: flex; gap: 10px; }
-.actions a { font-size: 11px; font-weight: 700; }
+.tldr { max-width: 76ch; color: #4b5566; font-size: 12px; line-height: 1.55; }
+.paper-top .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-left: auto; justify-content: flex-end; }
+.paper-top .actions a { border-bottom: 1px solid #aab9d8; color: var(--blue); font-size: 10px; font-weight: 700; padding-bottom: 1px; }
+.paper-top .actions a:hover { border-bottom-color: var(--coral); color: var(--coral); text-decoration: none; }
 .compact { display: grid; grid-template-columns: 64px 1fr; gap: 10px; padding: 11px 5px; border-bottom: 1px solid var(--line); font-size: 12px; }
 .compact span { display: block; margin-top: 2px; color: var(--muted); }
 .record, .education-entry { display: grid; grid-template-columns: 42px 110px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -84,6 +90,9 @@ footer { width: min(var(--max), calc(100% - 32px)); margin: 0 auto 28px; padding
   .layout { grid-template-columns: 1fr; margin-top: 18px; }
   .sidebar { position: static; }
   main { padding: 0 18px; }
+  .paper { padding: 14px 4px; }
+  .paper-top { align-items: flex-start; }
+  .paper-top .actions { gap: 7px; }
   .record, .education-entry { grid-template-columns: 40px 82px minmax(0, 1fr); gap: 9px; }
   footer { display: block; }
   footer span { display: block; margin-bottom: 5px; }
